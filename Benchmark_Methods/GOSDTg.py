@@ -1,14 +1,3 @@
-'''
-# StrongTree
-
-To reproduce our experiments, replace the files in this directory with the
-copies from those in [ubc-systopia/gosdt-guesses](https://github.com/ubc-systopia/gosdt-guesses/tree/main).
-
-We do not redistribute them here because the original authors have not released
-their code under an open-source license.
-
-'''
-
 import pandas as pd
 from sklearn.model_selection import train_test_split
 import time, pathlib, csv, getopt, sys, os
