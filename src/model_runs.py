@@ -96,8 +96,7 @@ def main(argv):
                     cb_type = modeltype[5:]
                     if 'CUT' or 'POKE' in modeltype and len(cb_type) == 0:
                         cb_type = 'ALL'
-                    print('\n' + str(file) + ', H_' + str(h) + ', ' + str(modeltype) + ', Rand_' + str(i)
-                          + '. Run Start: ' + str(time.strftime("%I:%M:%S %p", time.localtime())))
+                    print('\nData: ' + str(file) + ', H: ' + str(h) + ', Model: ' + str(modeltype) + ', Rand State:' + str(i) + '. ')
                     # Log .lp and .txt files name
                     WSV = {'use': False, 'time': 0}
                     if tuning:

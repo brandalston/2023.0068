@@ -1,10 +1,9 @@
 import model_runs
 
-
 # Basic standard testing example
 data_names = ['soybean_small', 'monk3', 'car', 'iris', 'climate']
 heights = [3,4,5]
-models = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3']
+models = ['MCF1', 'MCF2', 'POKE-ALL', 'CUT-FRAC-3']
 time_limit = 3600
 extras = ['max_features-25']
 seeds = [13, 58, 94, None]
@@ -49,4 +48,3 @@ opt_model.model.update()
 opt_model.model.optimize()
 UTILS.model_summary(opt_model=opt_model, tree=tree, test_set=test_set,
                     rand_state=rand_state, results_file=None, data_name='ionosphere')
-

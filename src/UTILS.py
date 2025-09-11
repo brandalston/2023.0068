@@ -112,8 +112,8 @@ def preprocess(X, y=None, numerical_features=None, categorical_features=None, bi
         numerical_transformer = CandidateThresholdBinarizer()
     elif binarization == 'binning':
         numerical_transformer = KBinsDiscretizer(encode='onehot-dense')
-    # categorical_transformer = OneHotEncoder(drop='if_binary', sparse=False, handle_unknown='ignore') # Should work in scikit-learn 1.0
-    categorical_transformer = OneHotEncoder(sparse=False, handle_unknown='ignore')
+    # categorical_transformer = OneHotEncoder(drop='if_binary', sparse_output=False, handle_unknown='ignore') # Should work in scikit-learn 1.0
+    categorical_transformer = OneHotEncoder(sparse_output=False, handle_unknown='ignore')
     ct = ColumnTransformer([("num", numerical_transformer, numerical_features),
                             ("cat", categorical_transformer, categorical_features)])
     X_train_new = ct.fit_transform(X, y)

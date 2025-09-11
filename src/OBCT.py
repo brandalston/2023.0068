@@ -95,7 +95,7 @@ class OBCT:
         # Gurobi model
         self.model = Model(f'{self.modeltype}')
         # self.model.setParam(GRB.Param.OutputFlag, 1)
-        self.model.Params.LogToConsole = 0
+        self.model.Params.OutputFlag = 0
         self.model.Params.TimeLimit = time_limit
         # self.model.Params.DisplayInterval = 5
         # Use only 1 thread for testing purposes
